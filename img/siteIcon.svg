@@ -1,0 +1,21 @@
+<?xml-stylesheet type="text/css" href="/css/style.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+<path class="svgStroke" d="M1970,361.182C1970,294.255,1915.745,240,1848.818,240H151.182C84.255,240,30,294.255,30,361.182V613h1940
+	V361.182z"/>
+<path class="svgStroke" d="M30,613v1025.818C30,1705.745,84.255,1760,151.182,1760h1697.636c66.927,0,121.182-54.255,121.182-121.182V613
+	H30z"/>
+<circle class="svgStroke" cx="1792" cy="426.5" r="56.35"/>
+<circle class="svgStroke" cx="1232" cy="426.5" r="56.35"/>
+<circle class="svgStroke" cx="1512" cy="426.5" r="56.35"/>
+<polygon class="svgStroke" points="677,1113 677,1452.12 568.256,1343.376 485.691,1425.941 358.018,1298.267 180,1476.285 180,1113 	"/>
+<polygon class="svgStroke" points="677,1452.12 677,1610 180,1610 180,1476.285 358.018,1298.267 485.691,1425.941 568.256,1343.376 	"/>
+<line class="svgStroke" x1="233.164" y1="1230.968" x2="345.13" y2="1230.968"/>
+<line class="svgStroke" x1="488.125" y1="1264.269" x2="594.452" y2="1264.269"/>
+<line class="svgStroke" x1="416.924" y1="1170.997" x2="470.088" y2="1170.997"/>
+<line class="svgStroke" x1="180" y1="770" x2="1282" y2="770"/>
+<line class="svgStroke" x1="184" y1="942" x2="1004" y2="942"/>
+<line class="svgStroke" x1="848" y1="1113" x2="1584" y2="1113"/>
+<line class="svgStroke" x1="848" y1="1278.667" x2="1661" y2="1278.667"/>
+<line class="svgStroke" x1="848" y1="1610" x2="1564" y2="1610"/>
+<line class="svgStroke" x1="848" y1="1444.333" x2="1751" y2="1444.333"/>
+</svg>

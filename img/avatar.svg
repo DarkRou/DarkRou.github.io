@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+<style type="text/css">
+	.st0{fill:#000;stroke:none;stroke-width:80;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFF;stroke-width:80;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFF;stroke-width:80;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+	<polygon class="st1" points="1877.345,939.284 1514.807,1567.215 485.193,1567.215 298.092,1242.864 122.655,939.284 1000,432.785 
+			"/>
+	<polyline class="st2" points="298.092,1242.864 735.247,805.549 1117.437,1187.74 1259.641,1045.537 1414.626,1200.522 
+		1624.735,990.413 1764.861,1130.539 	"/>
+	<polyline class="st2" points="953.984,1024.286 1226.406,751.864 1544.846,1070.303 	"/>
+</svg>

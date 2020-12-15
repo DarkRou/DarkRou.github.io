@@ -1,0 +1,114 @@
+@mixin flex($justify: center, $align: center, $direction: row){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+$background: #101010;
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Hero Light", Helvetica, Arial, sans-serif;
+    color: #fff;
+    user-select: none;
+
+    &:after, &:before{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+body{
+    background-color: $background;
+    font-size: 28px;
+    overflow: hidden;
+}
+object, svg{
+    pointer-events: none;
+}
+
+.content{
+    @include flex($direction: column);
+
+    width: 100%;
+    height: 100vh;
+}
+
+.copy{
+    position: absolute;
+    left: 3%;
+    bottom: 4%;
+    font-size: 24px;
+}
+
+@import "preloader";
+@import "blocks";
+@import "arrows";
+@import "list";
+
+.svgStroke{
+    fill:none;
+    stroke:#FFFFFF;
+    stroke-width:40;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+
+    transition: stroke 0.2s ease-in-out;
+}
+
+.displayNone{
+    display: none;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.fadeIn{
+    animation: fade 0.5s linear;
+}
+
+.fadeOut{
+    animation: fade 0.5s linear reverse;
+}
+
+.blur{
+    filter: blur(2px);
+    position: absolute;
+    opacity: 0;
+    transition: 0.2s linear;
+    transition-property: opacity, filter;
+    z-index: -1;
+}
+
+.scaleBlock{
+    transform: scale(0.80);
+    transition: 0.25s ease-in-out;
+    transition-property: width, transform, opacity;
+}
+
+.defaultTranslate{
+    transform: translateX(0);
+    transition: 0.25s ease-in-out;
+    transition-property: transform, opacity;
+}
+
+.noTransitions{
+    transition: none!important;
+}
+@import "media";

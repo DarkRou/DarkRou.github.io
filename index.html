@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>DarkRou</title>
+
+    <link rel="shortcut icon" href="/img/favicon.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div id="preloader">
+    <object data="/img/logo.svg" type="image/svg+xml"></object>
+</div>
+
+<div class="content">
+    <div class="arrow left" id="prev">
+        <div class="svgWithBlur">
+            <object class="blur" data="/img/arrow.svg" type="image/svg+xml"></object>
+            <object  data="/img/arrow.svg" type="image/svg+xml"></object>
+        </div>
+    </div>
+    <div class="block active" id="main">
+        <div class="categoryLogo" style="min-width: 600px; max-width: 600px">
+            <div class="svgWithBlur">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1250" class="blur">
+                    <polygon class="svgStroke" points="33.8,980 356,422 678.2,980 "/>
+                    <polygon class="svgStroke" points="1321.8,980 1644,422 1966.2,980 "/>
+                    <polygon class="svgStroke" points="1549.1,587 1322.2,980 677.8,980 560.7,777 450.9,587 1000,270 "/>
+                    <polyline class="svgStroke" points="560.7,777 834.3,503.3 1073.5,742.5 1162.5,653.5 1259.5,750.5 1391,619 1478.7,706.7 "/>
+                    <polyline class="svgStroke" points="971.2,640.2 1141.7,469.7 1341,669 "/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1250">
+                    <polygon class="svgStroke" points="33.8,980 356,422 678.2,980 "/>
+                    <polygon class="svgStroke" points="1321.8,980 1644,422 1966.2,980 "/>
+                    <polygon class="svgStroke" points="1549.1,587 1322.2,980 677.8,980 560.7,777 450.9,587 1000,270 "/>
+                    <polyline class="svgStroke" points="560.7,777 834.3,503.3 1073.5,742.5 1162.5,653.5 1259.5,750.5 1391,619 1478.7,706.7 "/>
+                    <polyline class="svgStroke" points="971.2,640.2 1141.7,469.7 1341,669 "/>
+                </svg>
+            </div>
+            <p class="categoryName">DarkRou</p>
+        </div>
+        <div class="list hidden zTranslate" style="min-width: 600px; max-width: 600px">
+            <div class="chat">
+                <div class="sayHello" style="opacity: 1"><p>Поприветсвуйте DarkRou</p></div>
+                <div class="profile">
+                    <div class="avatar">
+                        <object data="/img/avatar.svg" type="image/svg+xml"></object>
+                    </div>
+                    <div class="name">DarkRou</div>
+                    <div class="closeChat" id="hide">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" class="blur">
+                            <line class="svgStroke" x1="50" y1="1950" x2="1950" y2="50"/>
+                            <line class="svgStroke" x1="1950" y1="1950" x2="50" y2="50"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                            <line class="svgStroke" x1="50" y1="1950" x2="1950" y2="50"/>
+                            <line class="svgStroke" x1="1950" y1="1950" x2="50" y2="50"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="answers"></div>
+                <div class="textArea">
+                    <p>Выберите ответ...</p>
+                </div>
+                <div class="answerOptions">
+                    <div class="optionsBlock" id="greeting" style="display: flex; min-height: 140px">
+                        <div class="option">Привет</div>
+                        <div class="option">Привет. Дай ссылки на все твои соц. сети</div>
+                    </div>
+                    <div class="optionsBlock" id="yourHobby" style="display: none">
+                        <div class="option">А чем ты занимаешься?</div>
+                    </div>
+                    <div class="optionsBlock" id="findYourWorks" style="display: none">
+                        <div class="option">А где можно найти твои работы?</div>
+                    </div>
+                    <div class="optionsBlock" id="choose" style="display: none; min-height: 140px; width: 100%">
+                        <div class="option" id="separated">Сайты</div>
+                        <div class="option" id="separated">Фото</div>
+                        <div class="option" id="separated">Арты</div>
+                        <div class="option" id="all">Дай ссылки на все соц. сети</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block displayNone" id="site">
+        <div class="categoryLogo" style="min-width: 600px; max-width: 600px">
+            <div class="svgWithBlur">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" class="blur">
+                    <path class="svgStroke" d="M1970,361.182C1970,294.255,1915.745,240,1848.818,240H151.182C84.255,240,30,294.255,30,361.182V613h1940
+	V361.182z"/>
+                    <path class="svgStroke" d="M30,613v1025.818C30,1705.745,84.255,1760,151.182,1760h1697.636c66.927,0,121.182-54.255,121.182-121.182V613
+	H30z"/>
+                    <circle class="svgStroke" cx="1792" cy="426.5" r="56.35"/>
+                    <circle class="svgStroke" cx="1232" cy="426.5" r="56.35"/>
+                    <circle class="svgStroke" cx="1512" cy="426.5" r="56.35"/>
+                    <polygon class="svgStroke" points="677,1113 677,1452.12 568.256,1343.376 485.691,1425.941 358.018,1298.267 180,1476.285 180,1113 	"/>
+                    <polygon class="svgStroke" points="677,1452.12 677,1610 180,1610 180,1476.285 358.018,1298.267 485.691,1425.941 568.256,1343.376 	"/>
+                    <line class="svgStroke" x1="233.164" y1="1230.968" x2="345.13" y2="1230.968"/>
+                    <line class="svgStroke" x1="488.125" y1="1264.269" x2="594.452" y2="1264.269"/>
+                    <line class="svgStroke" x1="416.924" y1="1170.997" x2="470.088" y2="1170.997"/>
+                    <line class="svgStroke" x1="180" y1="770" x2="1282" y2="770"/>
+                    <line class="svgStroke" x1="184" y1="942" x2="1004" y2="942"/>
+                    <line class="svgStroke" x1="848" y1="1113" x2="1584" y2="1113"/>
+                    <line class="svgStroke" x1="848" y1="1278.667" x2="1661" y2="1278.667"/>
+                    <line class="svgStroke" x1="848" y1="1610" x2="1564" y2="1610"/>
+                    <line class="svgStroke" x1="848" y1="1444.333" x2="1751" y2="1444.333"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                    <path class="svgStroke" d="M1970,361.182C1970,294.255,1915.745,240,1848.818,240H151.182C84.255,240,30,294.255,30,361.182V613h1940
+	V361.182z"/>
+                    <path class="svgStroke" d="M30,613v1025.818C30,1705.745,84.255,1760,151.182,1760h1697.636c66.927,0,121.182-54.255,121.182-121.182V613
+	H30z"/>
+                    <circle class="svgStroke" cx="1792" cy="426.5" r="56.35"/>
+                    <circle class="svgStroke" cx="1232" cy="426.5" r="56.35"/>
+                    <circle class="svgStroke" cx="1512" cy="426.5" r="56.35"/>
+                    <polygon class="svgStroke" points="677,1113 677,1452.12 568.256,1343.376 485.691,1425.941 358.018,1298.267 180,1476.285 180,1113 	"/>
+                    <polygon class="svgStroke" points="677,1452.12 677,1610 180,1610 180,1476.285 358.018,1298.267 485.691,1425.941 568.256,1343.376 	"/>
+                    <line class="svgStroke" x1="233.164" y1="1230.968" x2="345.13" y2="1230.968"/>
+                    <line class="svgStroke" x1="488.125" y1="1264.269" x2="594.452" y2="1264.269"/>
+                    <line class="svgStroke" x1="416.924" y1="1170.997" x2="470.088" y2="1170.997"/>
+                    <line class="svgStroke" x1="180" y1="770" x2="1282" y2="770"/>
+                    <line class="svgStroke" x1="184" y1="942" x2="1004" y2="942"/>
+                    <line class="svgStroke" x1="848" y1="1113" x2="1584" y2="1113"/>
+                    <line class="svgStroke" x1="848" y1="1278.667" x2="1661" y2="1278.667"/>
+                    <line class="svgStroke" x1="848" y1="1610" x2="1564" y2="1610"/>
+                    <line class="svgStroke" x1="848" y1="1444.333" x2="1751" y2="1444.333"/>
+                </svg>
+            </div>
+            <p class="categoryName">Сайты</p>
+        </div>
+        <div class="list hidden zTranslate" style="min-width: 600px; max-width: 600px">
+            <div class="hideBar" id="hide">
+                <p>Скрыть</p>
+                <div class="arrowDown">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 674 2000" class="blur">
+                        <polyline class="svgStroke" points="613.999,27.09 46.001,1000.16 613.999,1973.23 "/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 674 2000">
+                        <polyline class="svgStroke" points="613.999,27.09 46.001,1000.16 613.999,1973.23 "/>
+                    </svg>
+                </div>
+            </div>
+            <div class="itemsWrapper">
+                <div class="items">
+                    <div class="sites">
+                        <div class="siteWrapper">
+                            <a class="sitePreview" href="#">
+                                <div class="siteScale">
+                                    <p class="siteName">darkrou.com</p>
+                                    <p class="siteDescription">Сайт портфолио DarkRou</p>
+                                    <img src="/img/sitePreview.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="siteWrapper">
+                            <a class="sitePreview" href="#">
+                                <div class="siteScale">
+                                    <p class="siteName">darkrou.com</p>
+                                    <p class="siteDescription">Сайт портфолио DarkRou</p>
+                                    <img src="/img/sitePreview.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="siteWrapper">
+                            <a class="sitePreview" href="#">
+                                <div class="siteScale">
+                                    <p class="siteName">darkrou.com</p>
+                                    <p class="siteDescription">Сайт портфолио DarkRou</p>
+                                    <img src="/img/sitePreview.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="siteWrapper">
+                            <a class="sitePreview" href="#">
+                                <div class="siteScale">
+                                    <p class="siteName">darkrou.com</p>
+                                    <p class="siteDescription">Сайт портфолио DarkRou</p>
+                                    <img src="/img/sitePreview.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block displayNone" id="photo">
+        <div class="categoryLogo" style="min-width: 600px; max-width: 600px">
+            <div class="svgWithBlur">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" class="blur">
+                    <path class="svgStroke" d="M632.6,601.4L436.9,940.3l-22.9,39.6l-272.3,471.6c-73-138.6-111.5-294-111.5-451.8
+		c0-139.1,28.7-273.1,85.3-398.3H632.6z"/>
+                    <path class="svgStroke" d="M1161.1,482.6H179.6c157.9-248.5,431-418,723.1-447.5L1161.1,482.6z"/>
+                    <path class="svgStroke" d="M1786.5,433.4l-258.4,447.5L1332.5,542l-22.9-39.6L1037.5,31C1334.8,42.6,1611.9,191.1,1786.5,433.4z"/>
+                    <path class="svgStroke" d="M1969.1,999.7c0,139.1-28.7,273.1-85.3,398.3h-517l195.7-338.9l22.9-39.6l272.3-471.6
+		C1930.6,686.5,1969.1,841.9,1969.1,999.7z"/>
+                    <path class="svgStroke" d="M1819.7,1516.7c-157.9,248.5-431,418-723.1,447.5l-258.4-447.5H1819.7z"/>
+                    <path class="svgStroke" d="M961.9,1968.3c-297.3-11.6-574.5-160.1-749.1-402.3l258.4-447.6l195.7,338.9l22.9,39.6L961.9,1968.3z"/>
+                    <polygon class="svgStroke" points="1459.6,999.7 1229.6,1398 769.7,1398 539.7,999.7 769.7,601.4 1229.6,601.4 	"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                    <path class="svgStroke" d="M632.6,601.4L436.9,940.3l-22.9,39.6l-272.3,471.6c-73-138.6-111.5-294-111.5-451.8
+		c0-139.1,28.7-273.1,85.3-398.3H632.6z"/>
+                    <path class="svgStroke" d="M1161.1,482.6H179.6c157.9-248.5,431-418,723.1-447.5L1161.1,482.6z"/>
+                    <path class="svgStroke" d="M1786.5,433.4l-258.4,447.5L1332.5,542l-22.9-39.6L1037.5,31C1334.8,42.6,1611.9,191.1,1786.5,433.4z"/>
+                    <path class="svgStroke" d="M1969.1,999.7c0,139.1-28.7,273.1-85.3,398.3h-517l195.7-338.9l22.9-39.6l272.3-471.6
+		C1930.6,686.5,1969.1,841.9,1969.1,999.7z"/>
+                    <path class="svgStroke" d="M1819.7,1516.7c-157.9,248.5-431,418-723.1,447.5l-258.4-447.5H1819.7z"/>
+                    <path class="svgStroke" d="M961.9,1968.3c-297.3-11.6-574.5-160.1-749.1-402.3l258.4-447.6l195.7,338.9l22.9,39.6L961.9,1968.3z"/>
+                    <polygon class="svgStroke" points="1459.6,999.7 1229.6,1398 769.7,1398 539.7,999.7 769.7,601.4 1229.6,601.4 	"/>
+                </svg>
+
+            </div>
+            <p class="categoryName">Фото</p>
+        </div>
+        <div class="list hidden zTranslate" style="min-width: 600px; max-width: 600px">
+            <div class="hideBar" id="hide">
+                <p>Скрыть</p>
+                <div class="arrowDown">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 674 2000" class="blur">
+                        <polyline class="svgStroke" points="613.999,27.09 46.001,1000.16 613.999,1973.23 "/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 674 2000">
+                        <polyline class="svgStroke" points="613.999,27.09 46.001,1000.16 613.999,1973.23 "/>
+                    </svg>
+                </div>
+            </div>
+            <div class="scrollWrapper">
+                <div class="itemsWrapper">
+                    <div class="items gallery">
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_142107_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_143209_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20191210_164513_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_142107_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_143209_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20191210_164513_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_142107_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_143209_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20191210_164513_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_142107_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_143209_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20191210_164513_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fullImg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="block displayNone" id="art">
+        <div class="categoryLogo" style="min-width: 600px; max-width: 600px">
+            <div class="svgWithBlur">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" class="blur">
+                    <path class="svgStroke" d="M791.4,1681.2c-9-112.1-107.1-195.6-219.2-186.7c-64.6,5.2-119.7,40-153.1,89.9l0,0
+		C316,1704.8,186.4,1732.9,38.7,1697.2c0,0,0,0,0,0C87,1932,624.2,1984.9,751.4,1800.5C778.1,1762,794.5,1720.2,791.4,1681.2z"/>
+                    <path class="svgStroke" d="M673.8,1409.1l189.6,161.4c23.7,20.2,59.6,15.5,77.4-10.1l76.3-110l-249.2-212.2l-96.4,92.9
+		C649,1352.7,650.1,1388.9,673.8,1409.1z"/>
+                    <polygon class="svgStroke" points="767.9,1238.2 1017.1,1450.4 1962.9,87.2 	"/>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                    <path class="svgStroke" d="M791.4,1681.2c-9-112.1-107.1-195.6-219.2-186.7c-64.6,5.2-119.7,40-153.1,89.9l0,0
+		C316,1704.8,186.4,1732.9,38.7,1697.2c0,0,0,0,0,0C87,1932,624.2,1984.9,751.4,1800.5C778.1,1762,794.5,1720.2,791.4,1681.2z"/>
+                    <path class="svgStroke" d="M673.8,1409.1l189.6,161.4c23.7,20.2,59.6,15.5,77.4-10.1l76.3-110l-249.2-212.2l-96.4,92.9
+		C649,1352.7,650.1,1388.9,673.8,1409.1z"/>
+                    <polygon class="svgStroke" points="767.9,1238.2 1017.1,1450.4 1962.9,87.2 	"/>
+                </svg>
+
+            </div>
+            <p class="categoryName">Арты</p>
+        </div>
+        <div class="list hidden zTranslate" style="min-width: 600px; max-width: 600px">
+            <div class="hideBar" id="hide">
+                <p>Скрыть</p>
+                <div class="arrowDown">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 674 2000" class="blur">
+                        <polyline class="svgStroke" points="613.999,27.09 46.001,1000.16 613.999,1973.23 "/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 674 2000">
+                        <polyline class="svgStroke" points="613.999,27.09 46.001,1000.16 613.999,1973.23 "/>
+                    </svg>
+                </div>
+            </div>
+            <div class="scrollWrapper">
+                <div class="itemsWrapper">
+                    <div class="items gallery">
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_142107_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_143209_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20191210_164513_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_142107_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_143209_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20191210_164513_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_142107_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_143209_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20191210_164513_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_142107_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_143209_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20191210_164513_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_142107_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20190914_143209_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="exactItemWrapper">
+                            <div class="item">
+                                <img src="/img/IMG_20191210_164513_HDR.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fullImg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="arrow right" id="next">
+        <div class="svgWithBlur">
+            <object class="blur" data="/img/arrow.svg" type="image/svg+xml"></object>
+            <object data="/img/arrow.svg" type="image/svg+xml"></object>
+        </div>
+    </div>
+
+    <p class="copy">&copy DarkRou 2020</p>
+</div>
+
+<div id="socialsList" style="display: none">
+    <div class="answer socials" id="siteSocial">
+        <a class="socItem" href="https://instagram.com/" target="_blank">
+            <div class="socSvg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" class="blur">
+                    <path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+                h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+                    <circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+                    <circle class="instaCircle" cx="1600" cy="400" r="139"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                    <path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+                h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+                    <circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+                    <circle class="instaCircle" cx="1600" cy="400" r="139"/>
+                </svg>
+            </div>
+            <p>Instagram</p>
+        </a>
+    </div>
+    <div class="answer socials" id="photoSocial">
+        <a class="socItem" href="https://instagram.com/" target="_blank">
+            <div class="socSvg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" class="blur">
+                    <path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+                h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+                    <circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+                    <circle class="instaCircle" cx="1600" cy="400" r="139"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                    <path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+                h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+                    <circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+                    <circle class="instaCircle" cx="1600" cy="400" r="139"/>
+                </svg>
+            </div>
+            <p>Instagram</p>
+        </a>
+        <a class="socItem" href="https://instagram.com/" target="_blank">
+            <div class="socSvg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" class="blur">
+                    <path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+                h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+                    <circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+                    <circle class="instaCircle" cx="1600" cy="400" r="139"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                    <path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+                h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+                    <circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+                    <circle class="instaCircle" cx="1600" cy="400" r="139"/>
+                </svg>
+            </div>
+            <p>Instagram</p>
+        </a>
+    </div>
+    <div class="answer socials" id="artSocial">
+        <a class="socItem" href="https://instagram.com/" target="_blank">
+            <div class="socSvg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" class="blur">
+                    <path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+                h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+                    <circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+                    <circle class="instaCircle" cx="1600" cy="400" r="139"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                    <path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+                h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+                    <circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+                    <circle class="instaCircle" cx="1600" cy="400" r="139"/>
+                </svg>
+            </div>
+            <p>Instagram</p>
+        </a>
+        <a class="socItem" href="https://instagram.com/" target="_blank">
+            <div class="socSvg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" class="blur">
+                    <path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+                h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+                    <circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+                    <circle class="instaCircle" cx="1600" cy="400" r="139"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                    <path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+                h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+                    <circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+                    <circle class="instaCircle" cx="1600" cy="400" r="139"/>
+                </svg>
+            </div>
+            <p>Instagram</p>
+        </a>
+        <a class="socItem" href="https://instagram.com/" target="_blank">
+            <div class="socSvg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" class="blur">
+                    <path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+                h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+                    <circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+                    <circle class="instaCircle" cx="1600" cy="400" r="139"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                    <path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+                h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+                    <circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+                    <circle class="instaCircle" cx="1600" cy="400" r="139"/>
+                </svg>
+            </div>
+            <p>Instagram</p>
+        </a>
+    </div>
+</div>
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml-stylesheet type="text/css" href="/css/style.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+	<path class="svgStroke" d="M1513.136,1936H486.864C253.322,1936,64,1746.677,64,1513.136V486.864C64,253.322,253.322,64,486.864,64
+		h1026.273C1746.677,64,1936,253.322,1936,486.864v1026.273C1936,1746.677,1746.677,1936,1513.136,1936z"/>
+	<circle class="svgStroke" cx="1000" cy="1000" r="426"/>
+	<circle class="instaCircle" cx="1600" cy="400" r="139"/>
+</svg>

@@ -1,0 +1,33 @@
+.arrow{
+    @include flex($direction: column);
+
+    z-index: 10;
+    position: absolute;
+    width: 70px;
+
+    &:hover{
+        cursor: pointer;
+
+        .blur{
+            opacity: 1;
+        }
+    }
+
+    object{
+        width: 70px;
+
+    }
+}
+
+.svgWithBlur{
+    @include flex;
+}
+
+.left{
+    left: 2%;
+}
+
+.right{
+    transform: rotate(180deg);
+    right: 2%;
+}

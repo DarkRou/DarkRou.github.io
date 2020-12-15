@@ -1,0 +1,21 @@
+#preloader{
+    @include flex;
+
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: $background;
+
+    object{
+        width: 320px;
+        animation: fade 1s linear alternate infinite;
+    }
+}
+
+.hide{
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
